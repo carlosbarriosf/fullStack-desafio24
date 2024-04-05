@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-main: #8b5cf6;
+    --color-main-hover: rgb(151, 121, 244);
+}
+
+h1 {
+    text-align: center;
+    color: var(--color-main);
+    margin-top: 1.5rem;
+}
+
+.btn {
+    background-color: #8b5cf6;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.3s;
+}
+
+.openModalBtn {
+    margin-left: 5%;
+}
+
+.btn:hover {
+    background-color: rgb(151, 121, 244);
+}
+
+.closeModalBtn {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.addNoteModal {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    margin: auto;
+    width: 80%;
+    max-width: 500px;
+    height: 150px;
+    position: relative;
+}
+
+.modalTitle {
+    margin: 1rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--color-main);
+}
+
+.newNoteForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.newNoteForm input[type='text'] {
+    width: 80%;
+    border: 1px solid var(--color-main-hover);
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+}
+
+.noteContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
+    margin-top: 2rem;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.note {
+    height: 130px;
+    background-color: #818cf8;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    position: relative;
+}
+
+.noteField {
+    background: none;
+    border: 1px dashed white;
+    border-radius: 6px;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    font-style: italic;
+    padding: 0 0.25rem;
+    width: 90%;
+    height: 80%;
+    resize: none;
+}
+
+.noteControls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.noteControls button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.noteControls button:hover {
+    transform: scale(1.3);
+}
+
+.setFavourite {
+    position: absolute;
+    color: #cbd5e1;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    transition: all 0.3s;
+}
+
+.setFavourite:hover {
+    color: #fbbf24;
+}
+
+.favourite {
+    color: #fbbf24;
+}
